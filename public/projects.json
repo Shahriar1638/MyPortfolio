@@ -1,0 +1,75 @@
+{
+  "projects": {
+    "basic":[
+      {
+        "title": "Zombie Attack Survival",
+        "type": "Academic Project",
+        "period": "2025",
+        "github_url": "https://github.com/TheOnlyNaimur/Zombie-Attack-Survival",
+        "description": "A 3D zombie survival game Using python and open gl. Players navigate procedurally generated environments, battle waves of zombies with dynamic weapon mechanics.",
+        "key_achievements": [
+          "Developed a dynamic 3D environment with procedural terrain & Implemented multiple camera modes (third-person and Free-fly)",
+          "Cannon with limited ammo & Bullet physics with boundary checks"
+        ],
+        "tags": ["Python", "PyOpenGL"]
+      }
+    ],
+    "dl_ml_research": [
+      {
+        "title": "Multi-Omics Sarcoma Subtype Classification",
+        "type": "Undergraduate Thesis",
+        "period": "2025 – Present",
+        "github_url": "https://github.com/Shahriar1638/Multi-Omics-P3",
+        "description": "Designed and implemented a deep learning architecture for sarcoma subtype classification using multi-omics data.",
+        "key_achievements": [
+          "Resolved critical issues in TCGA sarcoma datasets regarding severe class imbalance.",
+          "Optimized model for low sample sizes to achieve high f1-macro scores."
+        ],
+        "tags": ["Python", "PyTorch", "Scikit-learn", "Data Visualization", "Data statistics", "Data analysis", "Bioinformatics", "TCGA", "Multi-omics"]
+      },
+      {
+        "title": "Music Data Clustering and Feature Extraction",
+        "type": "Academic Project",
+        "period": "2025",
+        "github_url": "https://github.com/Shahriar1638/Hybrid-Language-Music-Clustering-VAE",
+        "description": "Extracted audio features and applied unsupervised learning techniques to cluster music data.",
+        "key_achievements": [
+          "Applied VAE (Variational Autoencoders) for hybrid language-music clustering.",
+          "Explored data-driven pattern discovery for music-related analysis tasks."
+        ],
+        "tags": ["Unsupervised Learning", "VAE", "Feature Extraction", "Audio Processing"]
+      }
+    ],
+    "web_applications": [
+      {
+        "title": "SurveyHub",
+        "stack": "MERN Stack",
+        "type": "Independent Project",
+        "live_url": "https://practice-2-firebase.web.app/",
+        "github_url": "https://github.com/Shahriar1638/SurveyHub",
+        "description": "Full-stack survey platform supporting creation, voting, and result visualization.",
+        "roadmap": "Integrating RAG (Retrieval-Augmented Generation) for deep sentiment and data analysis.",
+        "tags": ["MERN", "Data Visualization", "JWT Authentication", "Stripe API", "Firebase"]
+      },
+      {
+        "title": "BizNest",
+        "stack": "MERN Stack",
+        "type": "Independent Project",
+        "github_url": "https://github.com/Shahriar1638/Biznest",
+        "live_url": "https://biznest-3c9b6.web.app/",
+        "description": "E-commerce platform featuring product listings, user management, and order workflows.",
+        "roadmap": "Implementing AI-based dynamic recommendations and a purchase guide.",
+        "tags": ["E-commerce", "MERN", "JWT Authentication", "Stripe API", "Firebase"]
+      },
+      {
+        "title": "Grocery Hub",
+        "stack": "PHP, SQL",
+        "type": "Academic Project",
+        "github_url": "https://github.com/Shahriar1638/Groceryhub",
+        "description": "Management and ordering system featuring product management and database-driven operations.",
+        "roadmap": "Will Introduce scalable api",
+        "tags": ["PHP", "MySQL", "Relational Databases"]
+      }
+    ]
+  }
+}

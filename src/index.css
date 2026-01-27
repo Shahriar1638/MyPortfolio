@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-accent: var(--color-accent);
+  --color-bg-main: var(--bg-main);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-bg-panel: var(--bg-panel);
+  --color-border-color: var(--border-color);
+}
+
+:root {
+  font-family: 'Outfit', sans-serif;
+  color-scheme: light;
+  
+  /* Light Mode Variables */
+  --bg-main: #f8fafc; /* Slate-50 */
+  --text-main: #0f172a; /* Slate-900 */
+  --text-muted: #7c899b; /* Slate-500 */
+  --color-accent: #2563eb; /* Blue-600 */
+  --bg-panel: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  color-scheme: dark;
+  
+  /* Dark Mode Variables */
+  --bg-main: #0a0a0a;
+  --text-main: #e2e8f0; /* Slate-200 */
+  --text-muted: #94a3b8; /* Slate-400 */
+  --color-accent: #a855f7; /* Purple-500 */
+  --bg-panel: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  @apply bg-(--bg-main) text-(--text-main) antialiased transition-colors duration-200 selection:bg-accent/30 selection:text-white ;
+}
+
+/* Target your specific UI components for smooth transitions */
+.bg-bg-panel, .border-border-color, .text-text-muted, .text-accent, .hero-title, .bg-bg-main {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+@utility mask-linear-fade {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+/* Light mode - invert white icons to black */
+:root {
+  --icon-filter: none;
+}
+
+/* Dark mode - keep white icons white */
+.dark {
+  --icon-filter: invert(1);
+}
