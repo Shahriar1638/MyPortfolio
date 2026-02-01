@@ -36,12 +36,14 @@
 }
 
 body {
-  @apply bg-(--bg-main) text-(--text-main) antialiased transition-colors duration-200 selection:bg-accent/30 selection:text-white ;
+  @apply bg-(--bg-main) text-(--text-main) antialiased selection:bg-accent/30 selection:text-white;
 }
 
-/* Target your specific UI components for smooth transitions */
-.bg-bg-panel, .border-border-color, .text-text-muted, .text-accent, .hero-title, .bg-bg-main {
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+/* Global Theme Transition: Applies to all elements for consistent color switching */
+*, *::before, *::after {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
 
 @utility mask-linear-fade {

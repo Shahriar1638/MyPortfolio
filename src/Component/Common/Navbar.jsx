@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import {
   RiMenu3Line,
   RiCloseLine,
@@ -11,17 +11,18 @@ import { useTheme } from "../../Context/ThemeContext";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
 
   // Navigation Links
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "My CV", path: "/cv" },
-    { name: "All Projects", path: "/projects" },
-    { name: "Contacts", path: "/contacts" },
+    // { name: "All Projects", path: "/projects" },
+    // { name: "Contacts", path: "/contacts" },
   ];
 
   return (
-    <nav className="fixed w-full z-50 top-0 start-0 backdrop-blur-xl transition-colors duration-300">
+    <nav className="fixed w-full z-50 top-0 start-0 backdrop-blur-xl transition-colors duration-300 bg-(--bg-main)/80 border-b border-(--border-color)">
       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         {/* Logo */}
         <Link
@@ -34,16 +35,27 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="text-sm uppercase tracking-widest text-(--text-muted) hover:text-(--text-main) transition-colors duration-300 relative group"
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`text-sm uppercase tracking-widest transition-colors duration-300 relative group ${
+                  isActive
+                    ? "text-accent drop-shadow-[0_0_5px_var(--color-accent)] font-medium"
+                    : "text-(--text-muted) hover:text-(--text-main)"
+                }`}
+              >
+                {link.name}
+                <span
+                  className={`absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                ></span>
+              </Link>
+            );
+          })}
 
           {/* Theme Toggle */}
           <button
@@ -91,16 +103,23 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden absolute top-20 left-0 w-full bg-(--bg-main) border-b border-(--border-color) py-4 px-6 flex flex-col gap-4 shadow-2xl transition-colors duration-300">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-              className="text-lg font-light text-(--text-muted) hover:text-accent transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className={`text-lg font-light transition-colors ${
+                  isActive
+                    ? "text-accent font-bold drop-shadow-[0_0_2px_accent]"
+                    : "text-muted hover:text-accent"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
       )}
     </nav>

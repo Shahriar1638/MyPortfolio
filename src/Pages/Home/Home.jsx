@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { RiArrowRightLine } from "react-icons/ri";
 import Skills from "./Skills";
 import Project from "./Project";
+import AboutMe from "./AboutMe";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
           <div className="mb-6 flex items-center gap-3">
             <div className="h-px w-12 bg-accent"></div>
             <span className="text-accent font-medium tracking-[0.2em] uppercase text-sm">
-              Software Engineer | Web • Backend • Data
+              Software Engineer | Backend • Full-Stack • Database
             </span>
           </div>
 
@@ -35,22 +36,23 @@ const Home = () => {
 
           {/* Subtext */}
           <p className="text-(--text-muted) text-lg md:text-xl max-w-xl mb-12 font-light leading-relaxed">
-            A recent CS graduate with hands-on experience building robust
-            applications using the MERN stack, designing backend systems with
-            SQL and NoSQL databases, and rapidly learning new technologies. I
-            also have foundational ML/DL and data analysis skills that
-            complement my engineering work.
+            A backend-focused full-stack developer who builds clean, scalable,
+            and reliable web systems.
           </p>
 
           {/* Call to Action */}
           <div className="flex flex-wrap gap-6 items-center">
-            <Link
-              to="/projects"
+            <button
+              onClick={() => {
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="group px-8 py-4 bg-(--text-main) text-(--bg-main) font-semibold rounded-full flex items-center gap-2 hover:bg-(--text-muted) transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
             >
               Explore Work
               <RiArrowRightLine className="group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
+            </button>
 
             <Link
               to="/contact"
@@ -61,6 +63,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* ---------------- ABOUT ME SECTION ---------------- */}
+      <AboutMe />
 
       {/* ---------------- SKILLS SECTION ---------------- */}
       <div className="py-24 relative z-10 animate-gradient-shift bg-linear-to-r from-bg-main via-accent/30 to-bg-main">
@@ -78,7 +83,9 @@ const Home = () => {
       </div>
 
       {/* ---------------- PROJECT SECTION ---------------- */}
-      <Project />
+      <div id="projects">
+        <Project />
+      </div>
     </div>
   );
 };

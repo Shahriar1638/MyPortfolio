@@ -7,12 +7,16 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const root = window.document.documentElement;
+    const favicon = document.querySelector("link[rel='icon']");
+
     if (theme === "dark") {
       root.classList.add("dark");
       root.classList.remove("light");
+      if (favicon) favicon.href = "/logo-dark.svg";
     } else {
       root.classList.add("light");
       root.classList.remove("dark");
+      if (favicon) favicon.href = "/logo-light.svg";
     }
     localStorage.setItem("theme", theme);
   }, [theme]);

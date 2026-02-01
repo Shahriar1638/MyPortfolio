@@ -85,7 +85,7 @@ const Project = () => {
                   {project.type}
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex flex-row items-center gap-3">
                   {project.github_url && (
                     <a
                       href={project.github_url}
@@ -102,9 +102,10 @@ const Project = () => {
                       href={project.live_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-text-muted hover:text-accent text-xl"
+                      className="text-text-muted flex flex-row items-center hover:text-accent text-xl"
                       title="Visit Live Site"
                     >
+                      <span className="mr-1 text-sm">Live Link</span>
                       <RiArrowRightUpLine />
                     </a>
                   )}
