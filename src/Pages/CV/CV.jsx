@@ -18,7 +18,7 @@ const CV = () => {
       {/* Download Button */}
       <div className="mb-10">
         <a
-          href="/MD_Shahriar_Hossain_cv.pdf"
+          href={`${import.meta.env.BASE_URL}MD_Shahriar_Hossain_cv.pdf`}
           download="MD_Shahriar_Hossain_CV.pdf"
           className="group flex items-center gap-3 px-8 py-3 bg-[var(--text-main)] text-[var(--bg-main)] font-semibold rounded-full hover:bg-[var(--color-accent)] hover:text-white transition-all duration-300 shadow-[0_0_15px_var(--border-color)] hover:shadow-[0_0_25px_var(--color-accent)]/40"
         >
@@ -33,7 +33,7 @@ const CV = () => {
       {/* PDF Viewer Container */}
       <div className="w-full max-w-5xl aspect-[1/1.4] md:aspect-[16/9] lg:h-[80vh] rounded-2xl overflow-hidden border border-[var(--border-color)] shadow-2xl bg-[var(--bg-panel)]">
         <iframe
-          src="/MD_Shahriar_Hossain_cv.pdf"
+          src={`${import.meta.env.BASE_URL}MD_Shahriar_Hossain_cv.pdf`}
           className="w-full h-full"
           title="CV Preview"
         />
