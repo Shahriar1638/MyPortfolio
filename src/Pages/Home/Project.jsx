@@ -23,7 +23,7 @@ const Project = () => {
   };
 
   useEffect(() => {
-    fetch(`/projects.json?t=${new Date().getTime()}`)
+    fetch(`${import.meta.env.BASE_URL}projects.json?t=${new Date().getTime()}`)
       .then((res) => res.json())
       .then((data) => {
         setProjectsData(data.projects);
