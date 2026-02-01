@@ -64,13 +64,13 @@ const Project = () => {
             </p>
           </div>
 
-          <Link
+          {/* <Link
             to="/projects"
             className="hidden md:flex items-center gap-2 text-text-main font-medium group hover:text-accent"
           >
             View All Projects
             <RiArrowRightLine className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </Link> */}
         </div>
 
         {/* Projects Grid */}
