@@ -5,29 +5,38 @@ import CV from "../Pages/CV/CV";
 import Contact from "../Pages/Contacts/Contact";
 import Project from "../Pages/Home/Project";
 
-const PageRoutes = createBrowserRouter([
+const PageRoutes = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout></Layout>,
+      children: [
+        {
+          path: "/",
+          element: <Home></Home>,
+        },
+        {
+          path: "/cv",
+          element: <CV />,
+        },
+        {
+          path: "/contacts",
+          element: <Contact />,
+        },
+        {
+          path: "/contact", // Redirect alias/fallback
+          element: <Contact />,
+        },
+        {
+          path: "/projects",
+          element: <Project />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout></Layout>,
-    children: [
-      {
-        path: "/",
-        element: <Home></Home>,
-      },
-      {
-        path: "/cv",
-        element: <CV />,
-      },
-      {
-        path: "/contacts",
-        element: <Contact />,
-      },
-      {
-        path: "/contact", // Redirect alias/fallback
-        element: <Contact />,
-      },
-    ],
+    basename: "/MyPortfolio",
   },
-]);
+);
 
 export default PageRoutes;

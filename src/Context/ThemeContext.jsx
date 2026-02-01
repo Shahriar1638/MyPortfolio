@@ -12,11 +12,11 @@ export const ThemeProvider = ({ children }) => {
     if (theme === "dark") {
       root.classList.add("dark");
       root.classList.remove("light");
-      if (favicon) favicon.href = "/logo-dark.svg";
+      if (favicon) favicon.href = `${import.meta.env.BASE_URL}logo-dark.svg`;
     } else {
       root.classList.add("light");
       root.classList.remove("dark");
-      if (favicon) favicon.href = "/logo-light.svg";
+      if (favicon) favicon.href = `${import.meta.env.BASE_URL}logo-light.svg`;
     }
     localStorage.setItem("theme", theme);
   }, [theme]);
