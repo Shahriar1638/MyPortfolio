@@ -58,10 +58,10 @@ const Project = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Featured <span className="text-accent">Projects</span>
             </h2>
-            <p className="text-text-muted max-w-lg text-lg font-light leading-relaxed">
+            {/* <p className="text-text-muted max-w-lg text-lg font-light leading-relaxed">
               A selection of web applications and research work demonstrating my
               technical capabilities.
-            </p>
+            </p> */}
           </div>
 
           {/* <Link

@@ -65,9 +65,8 @@ const Contact = () => {
           Get in <span className="text-accent">Touch</span>
         </h1>
         <p className="text-(--text-muted) text-lg max-w-2xl mx-auto font-light leading-relaxed">
-          Have a project in mind or just want to say hello? I'm always open to
-          discussing new projects, creative ideas or opportunities to be part of
-          your visions.
+          Want to say hello? I'm always open to discussing and to have
+          opportunities to be part of your visions.
         </p>
       </div>
 
