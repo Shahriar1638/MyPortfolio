@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-import { RiArrowRightLine } from "react-icons/ri";
+import { RiArrowRightLine, RiGithubLine } from "react-icons/ri";
 import Skills from "./Skills";
 import Project from "./Project";
 import AboutMe from "./AboutMe";
@@ -60,6 +60,16 @@ const Home = () => {
             >
               Contact Me
             </Link>
+
+            <a
+              href="https://github.com/Shahriar1638"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 border border-(--border-color) rounded-full font-medium hover:bg-(--bg-panel) transition-all duration-300 text-(--text-muted) hover:text-(--text-main) hover:border-(--text-main)/30 flex items-center gap-2"
+            >
+              <RiGithubLine className="text-xl" />
+              GitHub
+            </a>
           </div>
         </div>
       </div>
