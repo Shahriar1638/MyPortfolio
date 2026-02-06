@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Location Tag */}
           <div className="flex items-center gap-2 text-xs font-medium tracking-[0.2em] uppercase opacity-70">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-            Based in Bangladesh / Remote
+            Based in Bangladesh
           </div>
 
           {/* Social Links */}
