@@ -1,4 +1,5 @@
 import { RiGithubLine, RiLinkedinLine, RiTwitterXLine } from "react-icons/ri";
+import { SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -49,6 +50,15 @@ const Footer = () => {
               aria-label="Twitter X"
             >
               <RiTwitterXLine size={24} />
+            </a>
+            <a
+              href="https://leetcode.com/u/KVIdLvL2rx/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-(--text-muted) hover:text-accent transition-all duration-300 transform hover:scale-110"
+              aria-label="LeetCode"
+            >
+              <SiLeetcode size={24} />
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 
 import { RiArrowRightLine, RiGithubLine } from "react-icons/ri";
+import { SiLeetcode } from "react-icons/si";
 import Skills from "./Skills";
 import Project from "./Project";
 import AboutMe from "./AboutMe";
@@ -69,6 +70,16 @@ const Home = () => {
             >
               <RiGithubLine className="text-xl" />
               GitHub
+            </a>
+
+            <a
+              href="https://leetcode.com/u/KVIdLvL2rx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 border border-(--border-color) rounded-full font-medium hover:bg-(--bg-panel) transition-all duration-300 text-(--text-muted) hover:text-(--text-main) hover:border-(--text-main)/30 flex items-center gap-2"
+            >
+              <SiLeetcode className="text-xl" />
+              LeetCode
             </a>
           </div>
         </div>
