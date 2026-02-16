@@ -34,8 +34,8 @@
         "github_url": "https://github.com/Shahriar1638/Hybrid-Language-Music-Clustering-VAE",
         "description": "Extracted audio features and applied unsupervised learning techniques to cluster music data.",
         "key_achievements": [
-          "Applied VAE (Variational Autoencoders) for hybrid language-music clustering.",
-          "Explored data-driven pattern discovery for music-related analysis tasks."
+          "Developed multiple VAE variants (Simple, Conv & Conditional) to learn latent representations for cross-language music clustering and Evaluated clusters using Silhouette, DBI, ARI, and visualized cluster with t-SNE.",
+          "Builtamulti-modal pipeline combining audio features Mel spectrograms with lyrics embeddings (Sentence-Transformers)."
         ],
         "tags": ["Unsupervised Learning", "VAE", "Feature Extraction", "Audio Processing"]
       }
@@ -47,9 +47,13 @@
         "type": "Independent Project",
         "live_url": "https://practice-2-firebase.web.app/",
         "github_url": "https://github.com/Shahriar1638/SurveyHub",
-        "description": "Full-stack survey platform supporting creation, voting, and result visualization.",
+        "description": "Developed a responsive survey platform with a security-first network layer and real-time voting.",
+        "key_achievements": [
+          "Used Axios interceptors to automate JWT injection and to centralize 401/403 error handling.",
+          "Implemented TanStack Query and custom hooks to synchronize RBAC state, improve caching, and reduce redundant API calls."
+        ],
         "roadmap": "Integrating RAG (Retrieval-Augmented Generation) for deep sentiment and data analysis.",
-        "tags": ["MERN", "Data Visualization", "JWT Authentication", "Stripe API", "Firebase"]
+        "tags": ["MERN", "JWT", "Firebase Auth", "Shadcn/UI", "Stripe", "TanStack Query", "Axios"]
       },
       {
         "title": "BizNest",
@@ -57,18 +61,25 @@
         "type": "Independent Project",
         "github_url": "https://github.com/Shahriar1638/Biznest",
         "live_url": "https://biznest-3c9b6.web.app/",
-        "description": "E-commerce platform featuring product listings, user management, and order workflows.",
+        "description": "Built a responsive UI and a robust e-commerce backend with Stripe integration and RBAC.",
+        "key_achievements": [
+          "Implemented a centralized authentication flow using Axios interceptors for automated token management and global error handling.",
+          "Architected a decoupled React frontend with a facade pattern and centralized hooks; applied an aggressive caching strategy to reduce redundant network requests."
+        ],
         "roadmap": "Implementing AI-based dynamic recommendations and a purchase guide.",
-        "tags": ["E-commerce", "MERN", "JWT Authentication", "Stripe API", "Firebase"]
+        "tags": ["MERN", "JWT", "TanStack Query", "Stripe", "Axios", "E-commerce"]
       },
       {
         "title": "Grocery Hub",
         "stack": "PHP, SQL",
         "type": "Academic Project",
         "github_url": "https://github.com/Shahriar1638/Groceryhub",
-        "description": "Management and ordering system featuring product management and database-driven operations.",
+        "description": "Architected a full-cycle ordering system using PHP and MySQL relational database design.",
+        "key_achievements": [
+          "Implemented optimized SQL queries for inventory management and user authentication, ensuring data integrity"
+        ],
         "roadmap": "Will Introduce scalable api",
-        "tags": ["PHP", "MySQL", "Relational Databases"]
+        "tags": ["PHP", "MySQL", "Relational Database Design"]
       }
     ]
   }
