@@ -1,4 +1,3 @@
-import React from "react";
 import { RiDownloadLine } from "react-icons/ri";
 
 const CV = () => {
