@@ -43,48 +43,43 @@
     "web_applications": [
       {
         "title": "SurveyHub",
-        "stack": "React · Node.js · Express.js · MongoDB · JWT · Firebase Auth · TanStack Query · Shadcn/UI",
+        "stack": "MERN Stack",
         "type": "Independent Project",
         "live_url": "https://practice-2-firebase.web.app/",
         "github_url": "https://github.com/Shahriar1638/SurveyHub",
-        "description": "A responsive full-stack survey management application featuring a live voting system and automated real-time data visualization using Recharts.",
+        "description": "Developed a responsive survey platform with a security-first network layer and real-time voting.",
         "key_achievements": [
-          "Developed a responsive full-stack survey management application featuring a live voting system and automated real-time data visualization using Recharts.",
-          "Engineered a secure Role-Based Access Control (RBAC) architecture, managing complex state logic to provide dedicated dashboards and separate content moderation workflows for users, surveyors, and admins.",
-          "Strengthened network security by utilizing Axios interceptors to automate secure JWT token injection and to centralize global error handling for 401/403 authorization failures.",
-          "Optimized application performance and state synchronization by leveraging TanStack Query and custom React hooks to establish efficient caching strategies and drastically reduce redundant API calls."
+          "Used Axios interceptors to automate JWT injection and to centralize 401/403 error handling.",
+          "Implemented TanStack Query and custom hooks to synchronize RBAC state, improve caching, and reduce redundant API calls."
         ],
         "roadmap": "Integrating RAG (Retrieval-Augmented Generation) for deep sentiment and data analysis.",
-        "tags": ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Firebase Auth", "TanStack Query", "Shadcn/UI", "RBAC", "Axios", "Recharts", "Vite"]
+        "tags": ["MERN", "JWT", "Firebase Auth", "Shadcn/UI", "Stripe", "TanStack Query", "Axios"]
       },
       {
         "title": "BizNest",
-        "stack": "React · Node.js · Express.js · MongoDB · Mongoose · JWT · TanStack Query · Stripe",
+        "stack": "MERN Stack",
         "type": "Independent Project",
         "github_url": "https://github.com/Shahriar1638/Biznest",
         "live_url": "https://biznest-3c9b6.web.app/",
-        "description": "A MERN-stack e-commerce marketplace with strict Role-Based Access Control (RBAC) supporting Customer, Seller, and Admin workflows.",
+        "description": "Built a responsive UI and a robust e-commerce backend with Stripe integration and RBAC.",
         "key_achievements": [
-          "Engineered a MERN-stack e-commerce marketplace with strict Role-Based Access Control (RBAC) to support Customer, Seller, and Admin workflows.",
-          "Architected a decoupled React frontend utilizing the Facade pattern, encapsulating complex API and business logic within custom hooks, and applied an aggressive caching strategy via TanStack Query to drastically reduce redundant network requests.",
-          "Implemented a secure authentication and request flow using Axios interceptors for automated JWT injection and global error handling, while hardening the backend with Helmet.js and Express Rate Limiting to mitigate common web vulnerabilities.",
-          "Integrated the Stripe API for secure checkout flows, utilizing server-side price recalculation against database records to prevent client-side cart tampering and enforce data integrity during payment intents."
+          "Implemented a centralized authentication flow using Axios interceptors for automated token management and global error handling.",
+          "Architected a decoupled React frontend with a facade pattern and centralized hooks; applied an aggressive caching strategy to reduce redundant network requests."
         ],
         "roadmap": "Implementing AI-based dynamic recommendations and a purchase guide.",
-        "tags": ["React", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "TanStack Query", "Stripe", "Axios", "Helmet.js", "RBAC", "E-commerce"]
+        "tags": ["MERN", "JWT", "TanStack Query", "Stripe", "Axios", "E-commerce"]
       },
       {
         "title": "Grocery Hub",
-        "stack": "PHP · MySQL · Relational Database Design",
+        "stack": "PHP, SQL",
         "type": "Academic Project",
         "github_url": "https://github.com/Shahriar1638/Groceryhub",
-        "description": "A full-cycle grocery ordering system with a normalized relational database, built using PHP and MySQL.",
+        "description": "Architected a full-cycle ordering system using PHP and MySQL relational database design.",
         "key_achievements": [
-          "Designed a normalized relational schema (3NF) in MySQL covering products, orders, inventory, and user accounts, with foreign key constraints and indexed queries for data integrity.",
-          "Built a full-cycle ordering workflow in PHP — browse, cart, checkout, inventory decrement — using parameterized queries throughout to prevent SQL injection."
+          "Implemented optimized SQL queries for inventory management and user authentication, ensuring data integrity"
         ],
         "roadmap": "Will Introduce scalable api",
-        "tags": ["PHP", "MySQL", "Relational Database Design", "3NF", "SQL"]
+        "tags": ["PHP", "MySQL", "Relational Database Design"]
       }
     ]
   }
