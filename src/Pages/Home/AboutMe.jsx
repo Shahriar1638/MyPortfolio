@@ -13,36 +13,26 @@ const AboutMe = () => {
           {/* Content */}
           <div className="md:w-2/3 space-y-6 text-(--text-muted) text-lg leading-relaxed font-light">
             <p className="hover:text-(--text-main) transition-colors duration-300">
-              I’m a{" "}
+              I'm a{" "}
               <strong className="text-accent font-medium">
-                backend-focused full-stack developer
+                Software Engineer
               </strong>{" "}
-              who enjoys designing clean, scalable, responsive and reliable
-              systems. I’m especially interested in backend engineering REST API
-              design , authentication flows, RBAC, database modeling, and
-              optimizing data pipelines to reduce redundant network overhead.
-            </p>
-
-            <p className="hover:text-(--text-main) transition-colors duration-300">
-              I mainly work with the{" "}
-              <strong className="text-accent font-medium">MERN stack</strong>,{" "}
-              SQL/NoSQL databases with modern frontend tools like React,
-              Tailwind, TanStack Query, and Axios to build smooth, end-to-end
-              experiences. I’m comfortable working across the full stack as
-              needed. My real strength and interest lie in backend + Frontend
-              architecture design and system-level problem solving.
-            </p>
-
-            <p className="hover:text-(--text-main) transition-colors duration-300">
-              I also have complementary experience in{" "}
-              <strong className="text-accent font-medium">DL/ML</strong> using
-              PyTorch and TensorFlow, which helps me approach engineering
-              challenges with a more analytical and data-driven mindset. I’m
-              currently looking to grow as a{" "}
+              who enjoys building clean, scalable, and reliable applications
+              across the full stack. I have strong experience working with{" "}
               <strong className="text-accent font-medium">
-                Full-Stack Developer/ Backend Developer/ Backend Engineer
+                JavaScript, Node.js, React
+              </strong>
+              , and both SQL and NoSQL databases, with a particular interest in
+              backend engineering, API design, authentication systems, and data
+              flow optimization. I focus on writing maintainable code, designing
+              structured systems, and building smooth end-to-end user
+              experiences. Alongside web development, I also have experience in{" "}
+              <strong className="text-accent font-medium">
+                Machine Learning and Deep Learning
               </strong>{" "}
-              contributing to secure, well-structured, and production-ready
+              using PyTorch and TensorFlow, which helps me approach problems
+              with a more analytical mindset. I'm currently looking to grow by
+              contributing to real-world projects and building production-ready
               systems.
             </p>
 
