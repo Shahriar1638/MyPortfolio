@@ -218,13 +218,18 @@ function typewriter(selector, text, speed = 25) {
 function letterFlicker(selector) {
   const els = document.querySelectorAll(selector);
   els.forEach((el) => {
-    const chars = el.textContent.trim().split("");
-    el.innerHTML = chars
-      .map(
-        (c) =>
-          `<span style="opacity:0;display:inline-block">${c === " " ? "&nbsp;" : c}</span>`,
-      )
-      .join("");
+    const lines = el.innerHTML.trim().split(/<br\s*\/?>/i);
+    el.innerHTML = lines
+      .map((line) => {
+        const chars = line.trim().split("");
+        return chars
+          .map(
+            (c) =>
+              `<span style="opacity:0;display:inline-block">${c === " " ? "&nbsp;" : c}</span>`,
+          )
+          .join("");
+      })
+      .join("<br>");
     gsap.to(`${selector} span`, {
       opacity: 1,
       duration: 0.06,
