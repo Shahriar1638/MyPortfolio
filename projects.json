@@ -42,20 +42,43 @@
     ],
     "web_applications": [
       {
-        "title": "SurveyHub",
-        "stack": "React · Node.js · Express.js · MongoDB · JWT · Firebase Auth · TanStack Query · Shadcn/UI",
-        "type": "Independent Project",
-        "live_url": "https://practice-2-firebase.web.app/",
-        "github_url": "https://github.com/Shahriar1638/SurveyHub",
-        "description": "A responsive full-stack survey management application featuring a live voting system and automated real-time data visualization using Recharts.",
-        "key_achievements": [
-          "Developed a responsive full-stack survey management application featuring a live voting system and automated real-time data visualization using Recharts.",
-          "Engineered a secure Role-Based Access Control (RBAC) architecture, managing complex state logic to provide dedicated dashboards and separate content moderation workflows for users, surveyors, and admins.",
-          "Strengthened network security by utilizing Axios interceptors to automate secure JWT token injection and to centralize global error handling for 401/403 authorization failures.",
-          "Optimized application performance and state synchronization by leveraging TanStack Query and custom React hooks to establish efficient caching strategies and drastically reduce redundant API calls."
-        ],
-        "roadmap": "Integrating RAG (Retrieval-Augmented Generation) for deep sentiment and data analysis.",
-        "tags": ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Firebase Auth", "TanStack Query", "Shadcn/UI", "RBAC", "Axios", "Recharts", "Vite"]
+          "title": "SurveyHub",
+          "stack": "React 19 · Node.js · Express.js · MongoDB · JWT · Firebase Auth · TanStack Query v5 · BullMQ · Redis · Stripe · Gemini · OpenRouter · Framer Motion · Tailwind CSS · Vite",
+          "type": "Independent Project",
+          "live_url": "https://practice-2-firebase.web.app/",
+          "github_url": "https://github.com/Shahriar1638/SurveyHub",
+          "description": "A full-stack SaaS survey and community platform with AI-powered analytics, a credit-wallet monetization system, automated content moderation, and a community blog engine featuring nested comments and reactions.",
+          "key_achievements": [
+            "Architected a resilient 3-provider AI fallback chain (Gemini → OpenRouter → OpenCode Zen) with key rotation and dynamic model selection, powering automated survey insight generation, AI chat sandbox, and pre-publish content moderation.",
+            "Designed a credit-wallet monetization layer integrated with Stripe Checkout (one-time sessions) and webhook fulfillment, featuring atomic credit deduction, payment deduplication guards, and role promotion on first purchase.",
+            "Engineered a factory-pattern RBAC middleware system with independently testable auth guards (verifyToken, verifyAdmin, verifySurveyor, verifyUser), banned-user detection at the DB layer, and fail-fast startup checks.",
+            "Built a BullMQ + Redis expiry pipeline that schedules survey deadlines as delayed jobs, auto-aggregates response statistics on expiry, and gracefully degrades when Redis is unavailable.",
+            "Implemented end-to-end data integrity with compound unique indexes, soft-delete recycle bin with data-retention rules, array-cap pre-save hooks, denormalized counts, and status lifecycle state machines.",
+            "Optimized frontend performance via React.lazy() code splitting, TanStack Query v5 optimistic updates with rollback, and an Axios interceptor that automates secure JWT injection and 401/403 global error handling."
+          ],
+          "roadmap": "Exploring WebSocket-based real-time collaboration for survey building and live response dashboards.",
+          "tags": [
+            "React",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Mongoose",
+            "JWT",
+            "Firebase Auth",
+            "TanStack Query",
+            "BullMQ",
+            "Redis",
+            "Stripe",
+            "AI",
+            "Gemini",
+            "OpenRouter",
+            "RBAC",
+            "Zod",
+            "Framer Motion",
+            "Recharts",
+            "Tailwind CSS",
+            "Vite"
+          ]
       },
       {
         "title": "BizNest",
@@ -80,11 +103,43 @@
         "github_url": "https://github.com/Shahriar1638/Groceryhub",
         "description": "A full-cycle grocery ordering system with a normalized relational database, built using PHP and MySQL.",
         "key_achievements": [
-          "Designed a normalized relational schema (3NF) in MySQL covering products, orders, inventory, and user accounts, with foreign key constraints and indexed queries for data integrity.",
+          "Designed a normalized relational schema in MySQL covering products, orders, inventory, and user accounts, with foreign key constraints and indexed queries for data integrity.",
           "Built a full-cycle ordering workflow in PHP — browse, cart, checkout, inventory decrement — using parameterized queries throughout to prevent SQL injection."
         ],
         "roadmap": "Will Introduce scalable api",
         "tags": ["PHP", "MySQL", "Relational Database Design", "3NF", "SQL"]
+      },
+      {
+        "title": "Electronics E-Shop",
+        "stack": "React 18 · Node.js · Express.js · MongoDB · Firebase Auth · Tailwind CSS · DaisyUI · Vite",
+        "type": "Independent Project",
+        "live_url": "https://simple-eshop-8c4b3.web.app/",
+        "description": "A full-stack MERN e-commerce platform for electronics products featuring brand browsing, product listings, shopping cart, and user authentication. 100% hand-written code with zero AI assistance — built entirely during my MERN stack learning phase.",
+        "key_achievements": [
+          "Architected the entire MERN stack application from scratch without any AI code generation, demonstrating deep understanding of React component lifecycle, Express.js routing, and MongoDB data modeling.",
+          "Implemented Firebase Authentication with email/password and Google OAuth, including automatic user registration on first sign-in and protected routes via a custom PrivateRoute component.",
+          "Built a responsive e-commerce UI with Tailwind CSS + DaisyUI featuring dark/light mode toggle, mobile hamburger navigation, product carousels (React Slick), and real-time cart updates.",
+          "Designed a RESTful API with Express.js and MongoDB native driver covering full CRUD operations for products, users, and brands with proper error handling and data validation.",
+          "Deployed a production-ready application with Firebase Hosting (frontend) and Vercel (backend), implementing environment-based configuration and CORS policies."
+        ],
+        "roadmap": "Potential enhancements: order management system, payment integration, inventory tracking, and admin dashboard.",
+        "tags": ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth", "Tailwind CSS", "DaisyUI", "Vite", "REST API", "E-commerce", "No AI"]
+      },
+      {
+        "title": "DevJunction",
+        "stack": "React 18 · Node.js · Express.js · MongoDB · Firebase Auth · JWT · Cookie Parser · Tailwind CSS · DaisyUI · Axios · Vite",
+        "type": "Independent Project",
+        "live_url": "https://simple-project-2-687f2.web.app/",
+        "description": "A full-stack MERN job marketplace platform where employers post opportunities and freelancers browse, bid, and manage projects across Web Development, Digital Marketing, and Graphics Design categories. 100% human-written code with zero AI assistance — built entirely during my MERN stack learning journey.",
+        "key_achievements": [
+          "Architected a complete job marketplace from scratch without any AI code generation, implementing employer/freelancer workflows, job categorization, and a bid management system with status tracking (Pending, In Progress, Rejected, Complete).",
+          "Implemented secure JWT authentication with httpOnly cookies for session management, complementing Firebase Auth (email/password + Google OAuth) to demonstrate understanding of multiple authentication strategies.",
+          "Built a responsive tabbed navigation interface using React Tabs for browsing jobs by category, with protected routes via custom PrivateRoute component and loading states during async operations.",
+          "Designed a RESTful API with Express.js and MongoDB native driver featuring JWT token generation, cookie-based session handling, and CORS configuration for production deployment.",
+          "Developed role-based functionality enabling employers to post jobs and manage bids, while freelancers can browse opportunities, place bids, and track their bid statuses across a clean, intuitive UI."
+        ],
+        "roadmap": "Potential enhancements: real-time bid notifications, payment escrow system, freelancer profiles with portfolios, and admin dashboard for platform management.",
+        "tags": ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth", "JWT", "Cookie Parser", "Tailwind CSS", "DaisyUI", "Axios", "Vite", "REST API", "Job Marketplace", "No AI"]
       }
     ]
   }
