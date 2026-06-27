@@ -1,9 +1,62 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Download, Phone, Mail } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import gsap from "gsap";
 import { OrbitalRing } from "../OrbitalRing";
 
+function ChamferedBtn({ as: Tag = "a", borderColor = "var(--color-ink-secondary)", hoverBorderColor = "var(--color-ink)", textClass = "text-(--color-ink)", hoverText = "hover:text-(--color-ink)", className = "", children, ...props }) {
+  const btnRef = useRef(null);
+  const [size, setSize] = useState({ w: 0, h: 0 });
+
+  useEffect(() => {
+    if (!btnRef.current) return;
+    const obs = new ResizeObserver(([entry]) => {
+      setSize({ w: entry.target.offsetWidth, h: entry.target.offsetHeight });
+    });
+    obs.observe(btnRef.current);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <Tag
+      ref={btnRef}
+      className={`btn-chamfer inline-flex items-center gap-3 px-6 py-2 relative
+                  font-mono text-[11px] tracking-[0.15em] uppercase outline-none
+                  ${textClass} ${hoverText}
+                  transition-colors duration-200 ${className}`}
+      style={{ '--btn-stroke': borderColor, '--btn-stroke-hover': hoverBorderColor }}
+      {...props}
+    >
+      {children}
+      {size.w > 0 && (
+        <svg
+          className="absolute inset-0 pointer-events-none"
+          viewBox={`0 0 ${size.w} ${size.h}`}
+          aria-hidden="true"
+        >
+          <polygon
+            points={`0,0 ${size.w - 10},0 ${size.w},10 ${size.w},${size.h} 10,${size.h} 0,${size.h - 10}`}
+            fill="none"
+            stroke="var(--btn-stroke)"
+            strokeWidth="1"
+          />
+        </svg>
+      )}
+    </Tag>
+  );
+}
+
 export function Hero() {
   const ref = useRef(null);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+
+  const copyToClipboard = (text, setCopied) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -69,9 +122,9 @@ export function Hero() {
           "-=0.4",
         )
 
-        // Data row + CTA fade up
+        // Data row + CTAs fade up
         .fromTo(
-          [".hero-data", ".hero-cta"],
+          [".hero-data", ".hero-ctas"],
           { opacity: 0, y: 12 },
           { opacity: 1, y: 0, duration: 0.4, stagger: 0.1 },
           "-=0.3",
@@ -167,17 +220,44 @@ export function Hero() {
               ))}
             </div>
 
-            {/* CTA */}
-            <a
-              href="#projects"
-              className="hero-cta inline-flex items-center gap-3 px-6 py-3
-                          bg-(--color-ink) text-white font-mono text-[11px] tracking-[0.15em]
-                          uppercase border border-(--color-ink) outline-none
-                          hover:bg-(--color-accent) hover:text-(--color-on-accent) hover:border-(--color-accent)
-                          transition-colors duration-200"
-            >
-              // VIEW PROJECTS →
-            </a>
+            {/* CTAs */}
+            <div className="hero-ctas flex flex-wrap items-center gap-3 mt-2">
+              <a
+                href="#projects"
+                className="clip-chamfer-tr-bl inline-flex items-center gap-3 px-6 py-3 relative
+                            font-mono text-[11px] tracking-[0.15em] uppercase outline-none
+                            bg-(--color-ink) text-(--color-accent)
+                            hover:bg-(--color-accent) hover:text-(--color-on-accent)
+                            transition-colors duration-200"
+              >
+                <span className="text-(--color-accent)">//</span> VIEW PROJECTS →
+              </a>
+
+              <ChamferedBtn
+                as="a"
+                href="/MyPortfolio/MD_Shahriar_Hossain_cv.pdf"
+                download
+                className="gap-2 py-2"
+              >
+                <Download size={14} strokeWidth={1.5} /> DOWNLOAD CV
+              </ChamferedBtn>
+
+              <ChamferedBtn
+                as="button"
+                onClick={() => copyToClipboard('shafim1638@gmail.com', setCopiedEmail)}
+                className="cursor-pointer gap-2 py-2"
+              >
+                <Mail size={14} strokeWidth={1.5} /> {copiedEmail ? '✓ COPIED' : 'EMAIL'}
+              </ChamferedBtn>
+
+              <ChamferedBtn
+                as="button"
+                onClick={() => copyToClipboard('+8801906127394', setCopiedPhone)}
+                className="cursor-pointer gap-2 py-2"
+              >
+                <FaWhatsapp size={14} /> <Phone size={14} strokeWidth={1.5} /> {copiedPhone ? '✓ COPIED' : 'PHONE'}
+              </ChamferedBtn>
+            </div>
           </div>
 
           {/* Right decorative column */}
