@@ -8,9 +8,9 @@
 
   /* ─── Background (LIGHT) ────────────── */
   --color-bg:           #FFFFFF;
-  --color-bg-alt:       #F4F4F4;
-  --color-surface:      #EBEBEB;
-  --color-surface-2:    #E0E0E0;
+  --color-bg-alt:       #F7F7F7;
+  --color-surface:      #F0F0F0;
+  --color-surface-2:    #E8E8E8;
 
   /* ─── Borders ───────────────────────── */
   --color-border:       #D0D0D0;
@@ -19,8 +19,8 @@
 
   /* ─── Ink (dark on light) ───────────── */
   --color-ink:          #313739;
-  --color-ink-secondary:#7E807C;
-  --color-ink-muted:    #A0AAA9;
+  --color-ink-secondary:#5A5D5B;
+  --color-ink-muted:    #7A8080;
 
   /* ─── Accent ────────────────────────── */
   --color-accent:       #F8F546;

@@ -1,0 +1,154 @@
+{
+  "student": {
+    "id": "24141181",
+    "name": "Md Shahriar Hossain",
+    "university": "BRAC University",
+    "program": "Bachelor of Science in Computer Science",
+    "cumulative": {
+      "creditsAttempted": 123,
+      "creditsEarned": 120,
+      "cgpa": 3.29
+    }
+  },
+  "semesters": [
+    {
+      "term": "Spring 2022",
+      "gpa": 2.30,
+      "creditsAttempted": 3,
+      "creditsEarned": 3,
+      "courses": [
+        { "code": "CSE110", "title": "Programming Language I", "credits": 3, "grade": "C+", "note": "NT", "points": 2.30 },
+        { "code": "ENG091", "title": "Foundation Course (In English)", "credits": 0, "grade": "B-", "points": 2.70 },
+        { "code": "MAT092", "title": "Remedial Course in Mathematics", "credits": 0, "grade": "P", "points": 3.30 }
+      ]
+    },
+    {
+      "term": "Summer 2022",
+      "gpa": 3.35,
+      "creditsAttempted": 12,
+      "creditsEarned": 12,
+      "courses": [
+        { "code": "CSE111", "title": "Programming Language II", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "CSE230", "title": "Discrete Mathematics", "credits": 3, "grade": "B-", "points": 2.70 },
+        { "code": "ENG101", "title": "Fundamentals of English", "credits": 3, "grade": "A-", "points": 3.70 },
+        { "code": "MAT110", "title": "Mathematics I: Differential Calculus & Coordinate Geometry", "credits": 3, "grade": "A-", "points": 3.70 }
+      ]
+    },
+    {
+      "term": "Fall 2022",
+      "gpa": 2.85,
+      "creditsAttempted": 12,
+      "creditsEarned": 12,
+      "courses": [
+        { "code": "BNG103", "title": "Bangla Language and Literature", "credits": 3, "grade": "B", "points": 3.00 },
+        { "code": "EMB101", "title": "Emergence of Bangladesh", "credits": 3, "grade": "B-", "points": 2.70 },
+        { "code": "ENG102", "title": "English Composition I", "credits": 3, "grade": "B-", "points": 2.70 },
+        { "code": "HUM103", "title": "Ethics and Culture", "credits": 3, "grade": "B", "points": 3.00 }
+      ]
+    },
+    {
+      "term": "Spring 2023",
+      "gpa": 3.48,
+      "creditsAttempted": 12,
+      "creditsEarned": 12,
+      "courses": [
+        { "code": "CSE110", "title": "Programming Language I", "credits": 3, "grade": "A+", "note": "RP", "points": 4.00 },
+        { "code": "MAT120", "title": "Mathematics II: Integral Calculus & Differential Equations", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "PHY111", "title": "Principles of Physics I", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "STA201", "title": "Elements of Statistics and Probability", "credits": 3, "grade": "B+", "points": 3.30 }
+      ]
+    },
+    {
+      "term": "Summer 2023",
+      "gpa": 2.63,
+      "creditsAttempted": 9,
+      "creditsEarned": 9,
+      "courses": [
+        { "code": "BIO101", "title": "Introduction to Biology", "credits": 3, "grade": "C+", "points": 2.30 },
+        { "code": "CSE220", "title": "Data Structures", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "PHY112", "title": "Principles of Physics II", "credits": 3, "grade": "C+", "points": 2.30 }
+      ]
+    },
+    {
+      "term": "Fall 2023",
+      "gpa": 3.43,
+      "creditsAttempted": 9,
+      "creditsEarned": 9,
+      "courses": [
+        { "code": "BUS201", "title": "Business and Human Communication", "credits": 3, "grade": "B", "points": 3.00 },
+        { "code": "CSE221", "title": "Algorithms", "credits": 3, "grade": "A", "points": 4.00 },
+        { "code": "MAT216", "title": "Mathematics IV: Linear Algebra & Fourier Analysis", "credits": 3, "grade": "B+", "points": 3.30 }
+      ]
+    },
+    {
+      "term": "Spring 2024",
+      "gpa": 3.40,
+      "creditsAttempted": 12,
+      "creditsEarned": 12,
+      "courses": [
+        { "code": "CSE320", "title": "Data Communications", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "CSE331", "title": "Automata and Computability", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "CSE370", "title": "Database Systems", "credits": 3, "grade": "A-", "points": 3.70 },
+        { "code": "ENV103", "title": "Elements of Environmental Sciences", "credits": 3, "grade": "B+", "points": 3.30 }
+      ]
+    },
+    {
+      "term": "Summer 2024",
+      "gpa": 3.90,
+      "creditsAttempted": 9,
+      "creditsEarned": 9,
+      "courses": [
+        { "code": "CSE330", "title": "Numerical Methods", "credits": 3, "grade": "A", "points": 4.00 },
+        { "code": "CSE471", "title": "System Analysis and Design", "credits": 3, "grade": "A", "points": 4.00 },
+        { "code": "MAT215", "title": "Mathematics III: Complex Variables & Laplace Transformations", "credits": 3, "grade": "A-", "points": 3.70 }
+      ]
+    },
+    {
+      "term": "Fall 2024",
+      "gpa": 3.50,
+      "creditsAttempted": 12,
+      "creditsEarned": 12,
+      "courses": [
+        { "code": "CSE421", "title": "Computer Networks", "credits": 3, "grade": "B", "points": 3.00 },
+        { "code": "CSE422", "title": "Artificial Intelligence", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "CSE437", "title": "Data Science: Coding with Real World Data", "credits": 3, "grade": "A-", "points": 3.70 },
+        { "code": "CSE470", "title": "Software Engineering", "credits": 3, "grade": "A", "points": 4.00 }
+      ]
+    },
+    {
+      "term": "Spring 2025",
+      "gpa": 2.77,
+      "creditsAttempted": 9,
+      "creditsEarned": 9,
+      "courses": [
+        { "code": "CSE260", "title": "Digital Logic Design", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "CSE321", "title": "Operating Systems", "credits": 3, "grade": "B-", "points": 2.70 },
+        { "code": "CSE423", "title": "Computer Graphics", "credits": 3, "grade": "C+", "points": 2.30 }
+      ]
+    },
+    {
+      "term": "Summer 2025",
+      "gpa": 3.33,
+      "creditsAttempted": 12,
+      "creditsEarned": 12,
+      "courses": [
+        { "code": "CSE340", "title": "Computer Architecture", "credits": 3, "grade": "B-", "points": 2.70 },
+        { "code": "CSE391", "title": "Programming for the Internet", "credits": 3, "grade": "A", "points": 4.00 },
+        { "code": "CSE440", "title": "Natural Language Processing II", "credits": 3, "grade": "B+", "points": 3.30 },
+        { "code": "CST306", "title": "Ethical Leadership", "credits": 3, "grade": "B+", "points": 3.30 }
+      ]
+    },
+    {
+      "term": "Fall 2025",
+      "gpa": 3.43,
+      "creditsAttempted": 12,
+      "creditsEarned": 12,
+      "courses": [
+        { "code": "CSE420", "title": "Compiler Design", "credits": 3, "grade": "B", "points": 3.00 },
+        { "code": "CSE425", "title": "Neural Networks", "credits": 3, "grade": "B", "points": 3.00 },
+        { "code": "HUM101", "title": "World Civilization and Culture", "credits": 3, "grade": "A-", "points": 3.70 },
+        { "code": "JPN101", "title": "Beginner Japanese", "credits": 3, "grade": "A+", "points": 4.00 }
+      ]
+    }
+  ]
+}

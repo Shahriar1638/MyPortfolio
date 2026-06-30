@@ -131,8 +131,8 @@ function V1ProjectCard({ project, index }) {
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="absolute bottom-2 right-4 font-display text-[7rem] text-(--color-ink-muted) leading-none select-none pointer-events-none z-0 opacity-20">
-          {String(project.id - 1).padStart(2, '0')}
+        <div className={`absolute bottom-2 font-display text-[7rem] text-(--color-ink-muted) leading-none select-none pointer-events-none z-0 opacity-20 ${!projectImages[project.id] || index % 2 === 0 ? 'right-4' : 'left-4'}`}>
+          {String(index + 1).padStart(2, '0')}
         </div>
 
         {isML && (
@@ -206,7 +206,7 @@ function V1ProjectCard({ project, index }) {
               </div>
             </div>
 
-            <div className="md:col-span-7 [direction:ltr] p-8 flex flex-col justify-center">
+            <div className={`md:col-span-7 [direction:ltr] p-8 flex flex-col justify-center ${index % 2 !== 0 ? 'text-right' : ''}`}>
               <div className="flex items-center justify-between mb-4">
                 <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-(--color-accent) bg-(--color-ink) px-2.5 py-1 clip-chamfer-md">
                   PROJECT — {String(project.id - 1).padStart(2, '0')}
@@ -222,11 +222,11 @@ function V1ProjectCard({ project, index }) {
 
               <div className="w-12 h-px bg-(--color-accent) my-4" />
 
-              <p className="font-body text-sm text-(--color-ink-secondary) leading-[1.7] max-w-[52ch]">
+              <p className={`font-body text-sm text-(--color-ink-secondary) leading-[1.7] max-w-[52ch] ${index % 2 !== 0 ? 'ml-auto' : ''}`}>
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-1.5 mt-5">
+              <div className={`flex flex-wrap gap-1.5 mt-5 ${index % 2 !== 0 ? 'justify-end' : ''}`}>
                 {project.tech.map((tech, i) => (
                   <span key={i}
                     className="font-mono text-[11px] tracking-[0.1em] uppercase px-2.5 py-1.5 bg-(--color-bg-alt) border border-(--color-border) text-(--color-ink-secondary)">
@@ -235,7 +235,7 @@ function V1ProjectCard({ project, index }) {
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-6 mt-6">
+              <div className={`flex flex-wrap gap-6 mt-6 ${index % 2 !== 0 ? 'justify-end' : ''}`}>
                 {project.githubUrl && (
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
                     className="font-mono text-[11px] tracking-[0.2em] uppercase text-(--color-ink-secondary) hover:text-(--color-accent) hover:border-b hover:border-(--color-accent) transition-colors duration-150 pb-px">
