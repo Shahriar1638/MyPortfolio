@@ -11,6 +11,10 @@ import biznestImg from '../../assets/biznest.png';
 import groceryHubImg from '../../assets/Gorcery Hub.png';
 import eshopImg from '../../assets/Electronic eshop.png';
 import devJunctionImg from '../../assets/Dev junction.png';
+import medixImg from '../../assets/Medix.png';
+import ncollectionsImg from '../../assets/ncollections.png';
+import ecompilotImg from '../../assets/ecompilot.png';
+import llcImg from '../../assets/llc nyc .png';
 
 const projectImages = {
   2: surveyhubImg,
@@ -18,16 +22,25 @@ const projectImages = {
   5: groceryHubImg,
   7: eshopImg,
   8: devJunctionImg,
+  9: medixImg,
+  10: ncollectionsImg,
+  12: ecompilotImg,
+  13: llcImg,
 };
 
 const categoryLabel = {
   2: 'FULL STACK',
   3: 'FULL STACK',
   4: 'ML / UNSUPERVISED',
-  5: 'WEB \u00B7 DATABASE',
-  6: 'GRAPHICS \u00B7 GAME',
+  5: 'WEB · DATABASE',
+  6: 'GRAPHICS · GAME',
   7: 'FULL STACK',
   8: 'FULL STACK',
+  9: 'FULL STACK · POS',
+  10: 'FULL STACK · E-COMMERCE',
+  11: 'FRONTEND · HEALTHCARE',
+  12: 'FULL STACK · AI AGENTS',
+  13: 'FULL STACK · LEGALTECH',
 };
 
 function FeaturedCard({ project }) {
@@ -36,9 +49,9 @@ function FeaturedCard({ project }) {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="clip-chamfer-md bg-(--color-border) p-px pl-0">
       <motion.article
-        className="relative bg-(--color-bg) border border-(--color-border) overflow-hidden"
+        className="clip-chamfer-md relative bg-(--color-bg) overflow-hidden"
         style={{ borderLeft: '4px solid var(--color-accent)' }}
         initial={{ clipPath: 'inset(0 100% 0 0)' }}
         animate={isInView ? { clipPath: 'inset(0 0% 0 0)' } : { clipPath: 'inset(0 100% 0 0)' }}
@@ -125,7 +138,7 @@ function V1ProjectCard({ project, index }) {
   return (
     <div>
       <motion.div
-        className="bracket-panel bg-white relative overflow-hidden group"
+        className="bracket-panel clip-chamfer-md bg-white relative overflow-hidden group"
         initial={{ x: -32, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, margin: '-60px' }}
@@ -145,7 +158,7 @@ function V1ProjectCard({ project, index }) {
           <div className="relative z-10 p-8 flex flex-col justify-center min-h-[220px]">
             <div className="flex items-center justify-between mb-4">
               <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-(--color-accent) bg-(--color-ink) px-2.5 py-1 clip-chamfer-md">
-                PROJECT — {String(project.id - 1).padStart(2, '0')}
+                PROJECT — {String(index + 1).padStart(2, '0')}
               </span>
               <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-(--color-ink-muted)">
                 {categoryLabel[project.id] ?? 'PROJECT'}
@@ -165,8 +178,11 @@ function V1ProjectCard({ project, index }) {
             <div className="flex flex-wrap gap-1.5 mt-5">
               {project.tech.map((tech, i) => (
                 <span key={i}
-                  className="font-mono text-[11px] tracking-[0.1em] uppercase px-2.5 py-1.5 bg-(--color-bg-alt) border border-(--color-border) text-(--color-ink-secondary)">
-                  {tech}
+                  className="clip-chamfer-tech bg-(--color-border) p-px inline-block">
+                  <span
+                    className="clip-chamfer-tech block font-mono text-[11px] tracking-[0.1em] uppercase px-2.5 py-1.5 bg-(--color-bg-alt) text-(--color-ink-secondary)">
+                    {tech}
+                  </span>
                 </span>
               ))}
             </div>
@@ -209,7 +225,7 @@ function V1ProjectCard({ project, index }) {
             <div className={`md:col-span-7 [direction:ltr] p-8 flex flex-col justify-center ${index % 2 !== 0 ? 'text-right' : ''}`}>
               <div className="flex items-center justify-between mb-4">
                 <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-(--color-accent) bg-(--color-ink) px-2.5 py-1 clip-chamfer-md">
-                  PROJECT — {String(project.id - 1).padStart(2, '0')}
+                  PROJECT — {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-(--color-ink-muted)">
                   {categoryLabel[project.id] ?? 'PROJECT'}
@@ -229,8 +245,11 @@ function V1ProjectCard({ project, index }) {
               <div className={`flex flex-wrap gap-1.5 mt-5 ${index % 2 !== 0 ? 'justify-end' : ''}`}>
                 {project.tech.map((tech, i) => (
                   <span key={i}
-                    className="font-mono text-[11px] tracking-[0.1em] uppercase px-2.5 py-1.5 bg-(--color-bg-alt) border border-(--color-border) text-(--color-ink-secondary)">
-                    {tech}
+                    className="clip-chamfer-tech bg-(--color-border) p-px inline-block">
+                    <span
+                      className="clip-chamfer-tech block font-mono text-[11px] tracking-[0.1em] uppercase px-2.5 py-1.5 bg-(--color-bg-alt) text-(--color-ink-secondary)">
+                      {tech}
+                    </span>
                   </span>
                 ))}
               </div>
@@ -265,7 +284,7 @@ function V1ProjectCard({ project, index }) {
 
 export function Projects() {
   const featured = projects[0];
-  const rest = [2, 3, 5, 7, 8, 4, 6].map(id => projects.find(p => p.id === id));
+  const rest = projects.filter(p => p.id !== featured.id);
 
   return (
     <section id="projects" className="py-24 relative bg-(--color-bg-alt) w-full">
