@@ -1,6 +1,6 @@
 {
   "projects": {
-    "basic":[
+    "basic": [
       {
         "title": "Zombie Attack Survival",
         "type": "Academic Project",
@@ -11,7 +11,10 @@
           "Developed a dynamic 3D environment with procedural terrain & Implemented multiple camera modes (third-person and Free-fly)",
           "Cannon with limited ammo & Bullet physics with boundary checks"
         ],
-        "tags": ["Python", "PyOpenGL"]
+        "tags": [
+          "Python",
+          "PyOpenGL"
+        ]
       }
     ],
     "dl_ml_research": [
@@ -25,7 +28,17 @@
           "Resolved critical issues in TCGA sarcoma datasets regarding severe class imbalance.",
           "Optimized model for low sample sizes to achieve high f1-macro scores."
         ],
-        "tags": ["Python", "PyTorch", "Scikit-learn", "Data Visualization", "Data statistics", "Data analysis", "Bioinformatics", "TCGA", "Multi-omics"]
+        "tags": [
+          "Python",
+          "PyTorch",
+          "Scikit-learn",
+          "Data Visualization",
+          "Data statistics",
+          "Data analysis",
+          "Bioinformatics",
+          "TCGA",
+          "Multi-omics"
+        ]
       },
       {
         "title": "Music Data Clustering and Feature Extraction",
@@ -37,48 +50,80 @@
           "Developed multiple VAE variants (Simple, Conv & Conditional) to learn latent representations for cross-language music clustering and Evaluated clusters using Silhouette, DBI, ARI, and visualized cluster with t-SNE.",
           "Builtamulti-modal pipeline combining audio features Mel spectrograms with lyrics embeddings (Sentence-Transformers)."
         ],
-        "tags": ["Unsupervised Learning", "VAE", "Feature Extraction", "Audio Processing"]
+        "tags": [
+          "Unsupervised Learning",
+          "VAE",
+          "Feature Extraction",
+          "Audio Processing"
+        ]
       }
     ],
     "web_applications": [
       {
-          "title": "SurveyHub",
-          "stack": "React 19 · Node.js · Express.js · MongoDB · JWT · Firebase Auth · TanStack Query v5 · BullMQ · Redis · Stripe · Gemini · OpenRouter · Framer Motion · Tailwind CSS · Vite",
-          "type": "Independent Project",
-          "live_url": "https://practice-2-firebase.web.app/",
-          "github_url": "https://github.com/Shahriar1638/SurveyHub",
-          "description": "A full-stack SaaS survey and community platform with AI-powered analytics, a credit-wallet monetization system, automated content moderation, and a community blog engine featuring nested comments and reactions.",
-          "key_achievements": [
-            "Architected a resilient 3-provider AI fallback chain (Gemini → OpenRouter → OpenCode Zen) with key rotation and dynamic model selection, powering automated survey insight generation, AI chat sandbox, and pre-publish content moderation.",
-            "Designed a credit-wallet monetization layer integrated with Stripe Checkout (one-time sessions) and webhook fulfillment, featuring atomic credit deduction, payment deduplication guards, and role promotion on first purchase.",
-            "Engineered a factory-pattern RBAC middleware system with independently testable auth guards (verifyToken, verifyAdmin, verifySurveyor, verifyUser), banned-user detection at the DB layer, and fail-fast startup checks.",
-            "Built a BullMQ + Redis expiry pipeline that schedules survey deadlines as delayed jobs, auto-aggregates response statistics on expiry, and gracefully degrades when Redis is unavailable.",
-            "Implemented end-to-end data integrity with compound unique indexes, soft-delete recycle bin with data-retention rules, array-cap pre-save hooks, denormalized counts, and status lifecycle state machines.",
-            "Optimized frontend performance via React.lazy() code splitting, TanStack Query v5 optimistic updates with rollback, and an Axios interceptor that automates secure JWT injection and 401/403 global error handling."
-          ],
-          "roadmap": "Exploring WebSocket-based real-time collaboration for survey building and live response dashboards.",
-          "tags": [
-            "React",
-            "Node.js",
-            "Express.js",
-            "MongoDB",
-            "Mongoose",
-            "JWT",
-            "Firebase Auth",
-            "TanStack Query",
-            "BullMQ",
-            "Redis",
-            "Stripe",
-            "AI",
-            "Gemini",
-            "OpenRouter",
-            "RBAC",
-            "Zod",
-            "Framer Motion",
-            "Recharts",
-            "Tailwind CSS",
-            "Vite"
-          ]
+        "title": "Medix — Medicine Management & Pharmacy POS",
+        "stack": "Next.js 16 (App Router) · React 19 · TypeScript · MongoDB Atlas · Mongoose · Turbopack · CSS Variables",
+        "type": "Company Portfolio Demo",
+        "github_url": "https://github.com/Shahriar1638/Medicine-inventory-manager",
+        "description": "A production-shaped pharmacy POS and inventory platform built against a real 21k-row Kaggle medicine dataset, targeted at actual pharmacy users as a working mock — covering catalog browsing, cart-driven checkout, customer capture, and revenue tracking end-to-end.",
+        "key_achievements": [
+          "Built a real-world pharmacy workflow: searchable/filterable catalog (medicine name, generic, manufacturer, dosage form, drug class), per-package variant selection with live stock counts, cart with quantity steppers, checkout with customer details and payment methods (Cash/Card/Mobile Banking), printable receipts, and an invoice & revenue dashboard with period-wise totals.",
+          "Engineered dual-mode inventory pages (list + grid) with a unified browser component, dynamic per-package stock management with manual stock adjustment via a confirm-gated modal (seeded stock model + sold/adjustment tracking), and out-of-stock prevention in the sales flow.",
+          "Implemented server-authoritative persistence on MongoDB Atlas with a graceful localStorage fallback and automatic offline-to-cloud invoice migration, plus a best-effort stock sync layer that decrements inventory in Mongo at sale time.",
+          "Solved hydration safety by backing theme, cart, invoices, and stock state with useSyncExternalStore over localStorage, eliminating SSR/client mismatch; added a pre-hydration theme script, dual light/dark themes, and a responsive sticky navbar with active-page indicators and mobile menu.",
+          "Authored a data toolchain that converts the raw Kaggle CSV into a cleaned runtime catalog (585 medicines, HTML-stripped, multi-package parsing) and bulk-imports it into Atlas with seeded stock and unique indexes."
+        ],
+        "roadmap": "Planned: serve the catalog from MongoDB instead of the static JSON, role-based staff accounts, and low-stock alerting.",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "MongoDB",
+          "Mongoose",
+          "Turbopack",
+          "POS",
+          "Inventory Management",
+          "localStorage",
+          "Data Processing"
+        ]
+      },
+      {
+        "title": "SurveyHub",
+        "stack": "React 19 · Node.js · Express.js · MongoDB · JWT · Firebase Auth · TanStack Query v5 · BullMQ · Redis · Stripe · Gemini · OpenRouter · Framer Motion · Tailwind CSS · Vite",
+        "type": "Independent Project",
+        "live_url": "https://practice-2-firebase.web.app/",
+        "github_url": "https://github.com/Shahriar1638/SurveyHub",
+        "description": "A full-stack SaaS survey and community platform with AI-powered analytics, a credit-wallet monetization system, automated content moderation, and a community blog engine featuring nested comments and reactions.",
+        "key_achievements": [
+          "Architected a resilient 3-provider AI fallback chain (Gemini → OpenRouter → OpenCode Zen) with key rotation and dynamic model selection, powering automated survey insight generation, AI chat sandbox, and pre-publish content moderation.",
+          "Designed a credit-wallet monetization layer integrated with Stripe Checkout (one-time sessions) and webhook fulfillment, featuring atomic credit deduction, payment deduplication guards, and role promotion on first purchase.",
+          "Engineered a factory-pattern RBAC middleware system with independently testable auth guards (verifyToken, verifyAdmin, verifySurveyor, verifyUser), banned-user detection at the DB layer, and fail-fast startup checks.",
+          "Built a BullMQ + Redis expiry pipeline that schedules survey deadlines as delayed jobs, auto-aggregates response statistics on expiry, and gracefully degrades when Redis is unavailable.",
+          "Implemented end-to-end data integrity with compound unique indexes, soft-delete recycle bin with data-retention rules, array-cap pre-save hooks, denormalized counts, and status lifecycle state machines.",
+          "Optimized frontend performance via React.lazy() code splitting, TanStack Query v5 optimistic updates with rollback, and an Axios interceptor that automates secure JWT injection and 401/403 global error handling."
+        ],
+        "roadmap": "Exploring WebSocket-based real-time collaboration for survey building and live response dashboards.",
+        "tags": [
+          "React",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "JWT",
+          "Firebase Auth",
+          "TanStack Query",
+          "BullMQ",
+          "Redis",
+          "Stripe",
+          "AI",
+          "Gemini",
+          "OpenRouter",
+          "RBAC",
+          "Zod",
+          "Framer Motion",
+          "Recharts",
+          "Tailwind CSS",
+          "Vite"
+        ]
       },
       {
         "title": "BizNest",
@@ -94,7 +139,20 @@
           "Integrated the Stripe API for secure checkout flows, utilizing server-side price recalculation against database records to prevent client-side cart tampering and enforce data integrity during payment intents."
         ],
         "roadmap": "Implementing AI-based dynamic recommendations and a purchase guide.",
-        "tags": ["React", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "TanStack Query", "Stripe", "Axios", "Helmet.js", "RBAC", "E-commerce"]
+        "tags": [
+          "React",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "JWT",
+          "TanStack Query",
+          "Stripe",
+          "Axios",
+          "Helmet.js",
+          "RBAC",
+          "E-commerce"
+        ]
       },
       {
         "title": "Grocery Hub",
@@ -103,43 +161,154 @@
         "github_url": "https://github.com/Shahriar1638/Groceryhub",
         "description": "A full-cycle grocery ordering system with a normalized relational database, built using PHP and MySQL.",
         "key_achievements": [
-          "Designed a normalized relational schema in MySQL covering products, orders, inventory, and user accounts, with foreign key constraints and indexed queries for data integrity.",
-          "Built a full-cycle ordering workflow in PHP — browse, cart, checkout, inventory decrement — using parameterized queries throughout to prevent SQL injection."
+          "Designed a 10-table normalized relational schema in MySQL with 7 foreign key constraints and indexed lookups to enforce data integrity across users, products, payments, and feedback.",
+          "Built a full 3-role e-commerce workflow in PHP (customer, seller, admin) covering signup, catalog browsing, cart, checkout, and simulated payment with transaction records.",
+          "Implemented a product moderation workflow (pending → published/rejected) with per-seller revenue tracking and sales analytics, plus a loyalty-points earn-and-redeem system."
         ],
         "roadmap": "Will Introduce scalable api",
-        "tags": ["PHP", "MySQL", "Relational Database Design", "3NF", "SQL"]
+        "tags": [
+          "PHP",
+          "MySQL",
+          "Relational Database Design",
+          "3NF",
+          "SQL"
+        ]
       },
       {
-        "title": "Electronics E-Shop",
-        "stack": "React 18 · Node.js · Express.js · MongoDB · Firebase Auth · Tailwind CSS · DaisyUI · Vite",
-        "type": "Independent Project",
-        "live_url": "https://simple-eshop-8c4b3.web.app/",
-        "description": "A full-stack MERN e-commerce platform for electronics products featuring brand browsing, product listings, shopping cart, and user authentication. 100% hand-written code with zero AI assistance — built entirely during my MERN stack learning phase.",
+        "title": "N Collections — Boutique E-commerce Platform",
+        "stack": "Next.js 16 (App Router) · React 19 · TypeScript · Supabase (Postgres, Auth, Storage, Edge Functions) · Tailwind CSS v4 · Zod · Vercel",
+        "type": "Client Contract Project",
+        "live_url": "https://www.n-collections.com/",
+        "github_url": "https://github.com/sequenceit-git/n_collection",
+        "description": "A full-stack boutique e-commerce platform for a women's fashion brand in Bangladesh (three-piece ensembles), designed and built end-to-end — UI design, database schema, storefront, and admin portal — covering catalog browsing, cart, checkout, order tracking, and complete store management.",
         "key_achievements": [
-          "Architected the entire MERN stack application from scratch without any AI code generation, demonstrating deep understanding of React component lifecycle, Express.js routing, and MongoDB data modeling.",
-          "Implemented Firebase Authentication with email/password and Google OAuth, including automatic user registration on first sign-in and protected routes via a custom PrivateRoute component.",
-          "Built a responsive e-commerce UI with Tailwind CSS + DaisyUI featuring dark/light mode toggle, mobile hamburger navigation, product carousels (React Slick), and real-time cart updates.",
-          "Designed a RESTful API with Express.js and MongoDB native driver covering full CRUD operations for products, users, and brands with proper error handling and data validation.",
-          "Deployed a production-ready application with Firebase Hosting (frontend) and Vercel (backend), implementing environment-based configuration and CORS policies."
+          "Built a complete customer storefront: filterable/sortable catalog with offset pagination, product detail pages with gallery and variant matrix, cart with 45-minute server-side stock holds, checkout with Cash on Delivery and manual bKash, printable invoices, public order tracking, and a ratings & reviews system.",
+          "Engineered an atomic ordering backend on Postgres RPCs (reserve_cart_stock, place_order_transaction) for race-safe stock decrements and server-generated order/invoice numbers, plus a recency-weighted popularity-scoring RPC that powers the best-sellers feed.",
+          "Delivered a full admin portal: analytics dashboard, product CRUD with promo and banner linking, order pipeline with manual bKash payment verification, and banner, review, and CMS managers (hero, collections, about, legal, contact channels).",
+          "Hardened every mutation with Supabase Auth gating against an admins table with active checks, honeypot plus identity-keyed rate limiting on public endpoints, RLS with service-role writes, Zod validation on all server actions, and a media pipeline using an Edge Function for image compression with direct-storage fallback.",
+          "Designed a custom Tailwind v4 theme with responsive storefront and admin shells, and modeled a normalized relational schema (~14 tables, indexes, FKs, storage buckets) evolved through ordered SQL migrations."
         ],
-        "roadmap": "Potential enhancements: order management system, payment integration, inventory tracking, and admin dashboard.",
-        "tags": ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth", "Tailwind CSS", "DaisyUI", "Vite", "REST API", "E-commerce", "No AI"]
+        "roadmap": "Planned: scheduled popularity recalculation cron, bKash payment-gateway integration, and low-stock alerting.",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Supabase",
+          "PostgreSQL",
+          "Tailwind CSS",
+          "Zod",
+          "Vercel",
+          "E-commerce",
+          "RLS",
+          "Server Actions",
+          "Database Design"
+        ]
       },
       {
-        "title": "DevJunction",
-        "stack": "React 18 · Node.js · Express.js · MongoDB · Firebase Auth · JWT · Cookie Parser · Tailwind CSS · DaisyUI · Axios · Vite",
-        "type": "Independent Project",
-        "live_url": "https://simple-project-2-687f2.web.app/",
-        "description": "A full-stack MERN job marketplace platform where employers post opportunities and freelancers browse, bid, and manage projects across Web Development, Digital Marketing, and Graphics Design categories. 100% human-written code with zero AI assistance — built entirely during my MERN stack learning journey.",
+        "title": "MedCare Portal — Patient Management & Doctor Booking",
+        "stack": "Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · shadcn · Radix UI · Sonner · date-fns",
+        "type": "Company Portfolio Demo",
+        "github_url": "https://github.com/Shahriar1638/Patient-management",
+        "description": "A production-shaped clinic mockup built for real clinical use (not in production) — covering doctor discovery, appointment booking with serial ticketing, and doctor-authored health blogs end-to-end.",
         "key_achievements": [
-          "Architected a complete job marketplace from scratch without any AI code generation, implementing employer/freelancer workflows, job categorization, and a bid management system with status tracking (Pending, In Progress, Rejected, Complete).",
-          "Implemented secure JWT authentication with httpOnly cookies for session management, complementing Firebase Auth (email/password + Google OAuth) to demonstrate understanding of multiple authentication strategies.",
-          "Built a responsive tabbed navigation interface using React Tabs for browsing jobs by category, with protected routes via custom PrivateRoute component and loading states during async operations.",
-          "Designed a RESTful API with Express.js and MongoDB native driver featuring JWT token generation, cookie-based session handling, and CORS configuration for production deployment.",
-          "Developed role-based functionality enabling employers to post jobs and manage bids, while freelancers can browse opportunities, place bids, and track their bid statuses across a clean, intuitive UI."
+          "Built a searchable doctor directory over 10 doctors across 10 specialties with name/clinic search, specialty filter, availability-day pills, and sorting (fee, rating, name), plus rich doctor cards with fee, timings, rating, and next-available slot.",
+          "Engineered a deterministic booking flow: working-day and fully-booked aware calendar, 15-minute slot grid with booked-state handling (including overnight shifts), validated patient form, and stable serial numbers with live queue offsets.",
+          "Implemented printable A4 serial tickets with barcode-style record IDs and chamber/fee/wait-time details, plus an SMS-confirmation dialog mock for ticket delivery.",
+          "Delivered doctor detail pages with editorial hero, qualifications, and per-doctor blog feeds, plus a 9-post health blog section with detail pages — all styled in a custom Clinical Editorial design system (Deep Teal, Epilogue + Inter).",
+          "Kept renders hydration-safe with deterministic hashing for booked slots and serials instead of randomness, and static JSON data for doctors, patients, and blogs."
         ],
-        "roadmap": "Potential enhancements: real-time bid notifications, payment escrow system, freelancer profiles with portfolios, and admin dashboard for platform management.",
-        "tags": ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth", "JWT", "Cookie Parser", "Tailwind CSS", "DaisyUI", "Axios", "Vite", "REST API", "Job Marketplace", "No AI"]
+        "roadmap": "Planned: backend persistence for bookings/patients, auth, and real SMS gateway integration.",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "shadcn",
+          "Radix UI",
+          "Appointment Booking",
+          "Healthcare",
+          "Static Data",
+          "UI Design"
+        ]
+      },
+      {
+        "title": "EcomPilot – Unified Multi-Marketplace Dashboard & Autonomous AI Agents",
+        "stack": "React 19 (Vite) · Tailwind CSS v4 · Node.js · Express 5 · MongoDB · Mongoose · JWT · OpenAI Responses & Agents API · Function Calling · Structured Outputs · In-Memory Sliding-Window Rate Limiting · Docker · Traefik · Vercel",
+        "type": "Client Contract Project",
+        "github_url": "https://github.com/sequenceit-git/unified_dashboard",
+        "description": "A multi-tenant e-commerce operations hub for US multichannel sellers (eBay, TikTok Shop, Temu) integrating core workflows — catalog, inventory logs, order tracking, customers, and analytics — with two autonomous AI systems: (1) a multi-stage Market Discovery Agent that crawls live web listings and wholesale channels to score profitable product opportunities; and (2) a guardrailed Customer Support AI Agent with read-only database tools, deterministic spam/jailbreak gates, and thread-level product/order context.",
+        "key_achievements": [
+          "Designed and built the role-based access system across three independent permission axes: (1) per-shop many-to-many grants giving sub-admins access to arbitrary shop subsets; (2) per-section route gating for navigation and API endpoints; (3) per-record automatic query scoping preventing cross-shop data leaks. Protected routes through a short middleware chain (JWT validation → user & shop resolution → route/role gating) backed by a 30-second size-capped in-memory cache to eliminate redundant database round-trips.",
+          "Implemented the core multichannel workflows: catalog with multi-row bulk uploads and image handling; inventory tracking with stock adjustments, low-stock alerts, and full historical audit logs; unified order management with status updates, carrier tracking entry, and refunds; customer directory with lifetime order histories; and a high-level analytics dashboard (revenue, order volume, marketplace distribution) powered by MongoDB aggregation pipelines and Recharts.",
+          "Engineered the asynchronous AI market-research pipeline (Discovery Agent) end-to-end: the API responds with 202 immediately while a background worker executes the pipeline, persisting real-time stage progress and opportunity cards incrementally to MongoDB ($set: { opportunities }) so server restarts or crashes never lose partial findings. Built an automated reboot sweeper for orphaned jobs, a single-active-run concurrency lock, and transient-error retries (exponential backoff with jitter on HTTP 429/5xx and socket timeouts) paired with automatic model fallback from gpt-5-mini to gpt-4o-mini.",
+          "Architected the discovery pipeline as a bounded search-and-evaluation funnel rather than an expensive monolithic prompt: Stage 1 discovers 10–15 trending candidates in a single live web-search call, followed by a Stage 2 deep-dive running with bounded parallelism (concurrency: 2) that cuts evaluation time by ~50% (~3 minutes for 12 items across ~25 live web searches) while remaining strictly within rate limits. Engineered a resilient JSON parser with stream-truncation repair that salvages complete candidate objects when output tokens are exhausted mid-array, eliminating wasted search cycles. Enforced domain allow-lists (eBay, Amazon, Walmart, Alibaba, Temu) and micro-skill prompt injections (340–486 tokens) to cap worst-case context size under 9.5k tokens.",
+          "Turned live marketplace pricing and wholesale supplier data into verifiable buy/sell decisions using pure Node.js math: landed cost = unit cost + shipping + conditional import duty, marketplace-specific referral fees (eBay: 13.6% + fixed, TikTok Shop: 8% + fixed), and net profit = selling price − landed cost − fees. Programmed a 0–100 multi-factor opportunity score balancing margins, sales velocity, competition density, and supplier lead times. Enforced a strict data-integrity gate requiring verified wholesale supplier buy links and filtering out products with unverified costs or sub-threshold net margins before report generation.",
+          "Closed the loop from automated research to live commerce: validated opportunities can be pushed directly into the product catalog as draft items with auto-generated SKUs, zero starting stock, and persisted supplier source links. Built sanitized data exports to CSV (guarded against spreadsheet formula injection: =,+,-,@) and styled Excel workbooks via ExcelJS.",
+          "Engineered an autonomous Customer Support AI Agent using a code-first ReAct pattern with strict read-only tools: inbound buyer inquiries pass through a zero-token deterministic gate before model execution, filtering out spam links, crypto phishing, prompt injections, and legal disputes (triggering automated strike lockouts or human escalation) while instantly serving canned responses for common greetings and courtesies to eliminate unnecessary token expenditure and latency.",
+          "Architected thread-level scoping across eBay, TikTok Shop, and Temu by pinning conversation models to specific marketplace listing references (listingRef), internal catalog products (productId), and buyer orders (orderRef). Scoped the agent’s execution to read-only tools (searchProducts, getProductDetails, getOrderDetails, searchFaqPolicies with weighted keyword scoring). Enforced Stage 8 output verification in code: rejecting replies citing unauthorized source IDs, exceeding 120 words, or containing hallucinated commitments (blocked promise phrases like \"we guarantee\", \"full refund\", or \"I will follow up\"), with complete audit trace persistence (tokens, latency, tool calls, flags) and an interactive Buyer/Seller dual-workspace."
+        ],
+        "roadmap": "Next up: connect real-time eBay Message API and webhook listeners to live marketplace threads, and expand auto-listing sync across TikTok Shop and Temu.",
+        "tags": [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Mongoose",
+          "JWT",
+          "RBAC",
+          "AI Agent",
+          "Autonomous Agents",
+          "OpenAI",
+          "ReAct Pattern",
+          "Web Search",
+          "Structured Outputs",
+          "Function Calling",
+          "Prompt Engineering",
+          "Guardrails",
+          "Rate Limiting",
+          "MongoDB Aggregation",
+          "E-commerce",
+          "Inventory Management",
+          "Order Management",
+          "CSV Export",
+          "ExcelJS",
+          "Docker",
+          "Traefik",
+          "Vercel"
+        ]
+      },
+      {
+        "title": "LLC Publication Online — Statutory Legal Compliance & Publishing Engine",
+        "stack": "React 19 (Vite) · Node.js · Express · MongoDB Atlas · Mongoose · JWT · Bcrypt · Bilingual i18n · Vercel",
+        "type": "Client Contract Project",
+        "live_url": "https://llc-publication.vercel.app/",
+        "github_url": "https://github.com/sequenceit-git/LLC_in",
+        "description": "A production legal compliance platform satisfying New York LLC Law § 206 with automated statutory publication coordination, county tariff calculations across all 62 NY counties, and a protected administrative operations console.",
+        "key_achievements": [
+          "Engineered statutory tariff resolution across all 62 New York counties with jurisdiction differentiation (Domestic vs. Foreign LLC), dynamic fee indexing from MongoDB Atlas, and server-side pricing integrity validation to prevent checkout tampering.",
+          "Architected a protected administrative operations console backed by bcrypt password hashing (10 salt rounds), signed JWT session tokens, and strict IP-based rate limiting on sensitive auth endpoints.",
+          "Implemented a comprehensive bilingual English/Spanish (Español) localization system with client-side language switching, localStorage persistence, and dynamic document metadata.",
+          "Developed turnkey multi-step checkout workflow with client-side card handling, contact capture, automated tearsheet tracking notes, and Department of State filing certificate logging.",
+          "Optimized backend API routing for Vercel Serverless with cached Mongoose connection pooling and sub-15ms preflight OPTIONS handling to eliminate cross-origin cold-start latency."
+        ],
+        "roadmap": "Planned: real-time Stripe Elements payment intent integration, automated publisher invoice OCR, and NY DOS digital affidavit verification webhooks.",
+        "tags": [
+          "React",
+          "Vite",
+          "Node.js",
+          "Express.js",
+          "MongoDB Atlas",
+          "Mongoose",
+          "JWT",
+          "Bcrypt",
+          "i18n",
+          "LegalTech",
+          "E-commerce",
+          "Vercel",
+          "REST API"
+        ]
       }
     ]
   }
